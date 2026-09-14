@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI 清晰度审查"
+  short_description: "审查并删除产品界面的冗余、自述和歧义，同时保留必要状态与恢复信息"
+  default_prompt: "使用 $ui-clarity-audit 审查这个产品界面，先列出删除、缩短和保留项，再在不制造歧义的前提下完成修改。"
