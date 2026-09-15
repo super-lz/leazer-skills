@@ -1,0 +1,4 @@
+interface:
+  display_name: "Flutter 品牌生命周期"
+  short_description: "指导 Flutter 多品牌接入、变更、停用、删除及完整性验收"
+  default_prompt: "使用 $flutter-brand-lifecycle 分析当前 Flutter 项目的品牌实现，指导完成目标操作，并基于实际证据判断接入完整度。"

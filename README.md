@@ -5,6 +5,7 @@
 ## Skills
 
 - `ui-clarity-audit`：从第一性原理审查产品界面的冗余、自述和歧义，同时保护必要状态、安全与恢复信息。
+- `flutter-brand-lifecycle`：指导 Flutter 多品牌新增、编辑、停用、删除和完整性审计，动态发现项目能力并按证据判断交付层级。
 
 ## 验证
 
@@ -12,6 +13,7 @@
 
 ```bash
 python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" skills/ui-clarity-audit
+python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" skills/flutter-brand-lifecycle
 ```
 
 ## 本地安装
@@ -20,6 +22,7 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_
 
 ```bash
 cp -R skills/ui-clarity-audit "$HOME/.agents/skills/"
+cp -R skills/flutter-brand-lifecycle "$HOME/.agents/skills/"
 ```
 
 所有修改先进入本仓库并完成验证，再更新安装副本。提交前不得包含凭据、个人原始资料或项目私密内容。
