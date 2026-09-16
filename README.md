@@ -1,6 +1,6 @@
 # leazer-skills
 
-个人 Skill 源码仓库。
+Leazer 维护的 Agent Skills 源码仓库。每个 Skill 都以独立目录保存，可直接阅读，也可通过 `npx skills` 安装。
 
 ## Skills
 
@@ -10,7 +10,7 @@
 
 ## 安装
 
-在目标项目根目录安装指定 Skill：
+安装前建议先阅读对应的 `SKILL.md`，确认其行为和适用范围。在目标项目根目录安装指定 Skill：
 
 ```bash
 npx skills add super-lz/leazer-skills \
@@ -25,3 +25,7 @@ cp -R skills/ui-clarity-audit "$HOME/.agents/skills/"
 cp -R skills/flutter-brand-lifecycle "$HOME/.agents/skills/"
 cp -R skills/norn-governance "$HOME/.agents/skills/"
 ```
+
+## License
+
+[MIT](LICENSE)
