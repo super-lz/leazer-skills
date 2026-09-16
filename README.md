@@ -29,3 +29,7 @@ cp -R skills/norn-governance "$HOME/.agents/skills/"
 ## License
 
 [MIT](LICENSE)
+
+## 贡献
+
+参见 [贡献指南](CONTRIBUTING.md)。
