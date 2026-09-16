@@ -1,0 +1,44 @@
+{
+  "managed_files": {
+    "AGENTS.md": {
+      "base_sha256": "a50bdf192dced729908fc7096cd3b830c60afaaf85b38ade351a5e6b81218e1c",
+      "managed_blocks": [
+        "core-governance"
+      ],
+      "ownership": "mixed",
+      "template_version": 5
+    },
+    "norn-governance/AGENTS.md": {
+      "base_sha256": "f336e13b8c1ff09d329562ecddd716683b8c0838afa55e6fa6eee994482bef91",
+      "managed_blocks": [
+        "governance-directory"
+      ],
+      "ownership": "mixed",
+      "template_version": 5
+    },
+    "norn-governance/appendix/README.md": {
+      "base_sha256": "ef0ae4b3900678ede86174c09e62813e3670041e9e3a4d25ec7e6d7f0f2dce04",
+      "managed_blocks": [
+        "appendix-governance"
+      ],
+      "ownership": "mixed",
+      "template_version": 5
+    },
+    "norn-governance/spec/AGENTS.md": {
+      "base_sha256": "7754bdffe691b21be9957794dd96deea1e08bc12fef0018006f0a0b5c49e9802",
+      "managed_blocks": [
+        "specification-governance"
+      ],
+      "ownership": "mixed",
+      "template_version": 5
+    },
+    "norn-governance/spec/main-spec.md": {
+      "base_sha256": null,
+      "managed_blocks": [],
+      "ownership": "project",
+      "template_version": 5
+    }
+  },
+  "schema_version": 1,
+  "template_version": 5
+}

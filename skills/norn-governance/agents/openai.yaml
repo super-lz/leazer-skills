@@ -1,0 +1,4 @@
+interface:
+  display_name: "Norn Governance"
+  short_description: "初始化、迁移、升级或审计项目中的 Norn AI 协作治理"
+  default_prompt: "使用 $norn-governance 初始化、迁移、升级或审计当前项目的 Norn 治理。"
