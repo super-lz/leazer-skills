@@ -1,6 +1,15 @@
 # leazer-skills
 
-个人 Codex Skill 源码仓库。仓库内容是长期维护的事实源，`~/.agents/skills` 仅保存运行时安装副本。
+个人 Skill 源码与第三方来源清单仓库。自有 Skill 以本仓库为长期维护的事实源，`~/.agents/skills` 仅保存运行时安装副本；第三方 Skill 只记录官方来源与核验版本，不复制上游内容。
+
+## 结构
+
+```text
+skills/                     # 自有或正式 fork 后由本仓库维护的 Skill
+registry/external.yaml      # 第三方来源、Skill 清单与核验快照
+```
+
+第三方的 `status: tracked` 只表示来源已登记；`source_verified: true` 表示来源已由官方文档核对，不等于内容已经完成安全或行为评测。
 
 ## Skills
 
@@ -15,6 +24,43 @@
 python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" skills/ui-clarity-audit
 python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" skills/flutter-brand-lifecycle
 ```
+
+第三方清单还应能被 YAML 解析，并保证 `id`、Skill 名称和来源不重复。更新 `resolved_commit` 前，先查看上游变更，再决定是否接受新版本。
+
+## 第三方 Skill
+
+当前登记了 Flutter 官方文档推荐的两组来源：
+
+- `flutter/agent-plugins`：仅登记 10 个 `flutter-*` Skill。
+- `dart-lang/skills`：登记 15 个 `dart-*` Skill。
+
+完整清单与本次核验 commit 见 [`registry/external.yaml`](registry/external.yaml)。仓库不保存第三方 Skill 正文；使用时在目标 Flutter/Dart 项目根目录运行 `npx skills`。
+
+先查看可安装内容：
+
+```bash
+npx skills add flutter/agent-plugins --list
+npx skills add dart-lang/skills --list
+```
+
+安装单个 Skill 到目标项目的 `.agents/skills/`：
+
+```bash
+npx skills add flutter/agent-plugins \
+  --skill flutter-add-widget-test \
+  --agent universal
+```
+
+需要按清单中的核验版本复现时，使用固定 commit：
+
+```bash
+npx skills add \
+  https://github.com/flutter/agent-plugins/tree/8c3fcb28036ac0f80713e372582ab0b1a1be59d8 \
+  --skill flutter-add-widget-test \
+  --agent universal
+```
+
+不要在本仓库根目录执行项目级安装，否则会把第三方运行副本写入本仓库的 `.agents/skills/`。也不要直接使用 `npx skills update` 代替审核；它会更新已安装内容，但不会替你检查上游行为变化。
 
 ## 本地安装
 
